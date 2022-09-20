@@ -1,2 +1,2 @@
 # PlotBERT
-PlotBERT is an bookworm Language Model pretrained with books and long essays (long text classification) where in the 5 stage plot.
+ PlotBERT is an long text classification bookworm Language Model pretrained with books and long essays where in the 5 stage plot. 
