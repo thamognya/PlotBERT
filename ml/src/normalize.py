@@ -1,14 +1,15 @@
 # file imports
+from unicodedata import normalize
 import constants
 # imports
 import contractions
-import string
-import nltk
-from transformers import pipeline
+import tokenizers
+from tokenizers.normalizers import Lowercase, NFKD, StripAccents
 
 """
 Resources:
 - https://towardsdatascience.com/text-normalization-for-natural-language-processing-nlp-70a314bfa646
+- https://www.ntentional.com/nlp/datasets/tokenization/processing/2020/10/09/comprehensive-datasets.html
 """
 
 # add contradictions
@@ -22,17 +23,12 @@ class NormalizeTextClass:
     def setInputText(self, inputTextIn):
         self.inputText = str(inputTextIn)
 
-    def lowerCase(self):
-        # convert all letters to lowercase
-        return self.inputText.lower()
-
     def expandContradictions(self):
-        # expand contradictions (for example ain't )
-        return contractions.fix(self.lowerCase())
+        return contractions.fix(self.inputText)
 
-    def removePunctuation(self):
-        # Remove punctuation from sentence
-        return self.expandContradictions().translate(str.maketrans('', '', string.punctuation))
-
+    def normalize(self):
+        normalierSeq = tokenizers.normalizers.Sequence([Lowercase(), NFKD(), StripAccents()])
+        return normalierSeq.normalize_str(self.expandContradictions())
+        
     def getNormalizedText(self):
-        return self.removePunctuation()
+        return self.normalize()
