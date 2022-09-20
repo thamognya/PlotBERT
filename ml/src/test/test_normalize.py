@@ -9,7 +9,7 @@ resources:
 """
 
 testingInput = "It would be unfair to demand that people cease pirating files when those same people aren't paid for their participation in very lucrative network schemes. Ordinary people are relentlessly spied on, and not compensated for information taken from them. While I'd like to see everyone eventually pay for music and the like, I'd not ask for it until there's reciprocity."
-testingOutput = "it would be unfair to demand that people cease pirating files when those same people are not paid for their participation in very lucrative network schemes. ordinary people are relentlessly spied on, and not compensated for information taken from them. while i would like to see everyone eventually pay for music and the like, i would not ask for it until there is reciprocity."
+testingOutput = "it would be unfair to demand that people cease pirating files when those same people are not paid for their participation in very lucrative network schemes ordinary people are relentlessly spied on and not compensated for information taken from them while i would like to see everyone eventually pay for music and the like i would not ask for it until there is reciprocity"
 
 @pytest.fixture
 def normalTextObj():
