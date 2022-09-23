@@ -4,6 +4,9 @@ import requests
 rp = RegisteredProviders()
 rp.parse_providers()
 
-for proxy in rp.proxies:
-    proxies = {"https": proxy.get_proxy()}
-    print(proxies)
+class ProxyList:
+
+    def getProxies(self, n):
+        proxies = []
+        proxies.append(rp.get_random_proxy())
+        return proxies
