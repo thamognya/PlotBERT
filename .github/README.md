@@ -4,7 +4,7 @@ PlotBERT is an long text classification bookworm Language Model pretrained with 
 
 # Research
 
-Long Short Term Bert model or Short Long Term Bert or Life long learning (still have to decide) with Sparse Categorical Cross-Entropy loss function with linked list type of data feeding model (similarr to linkbert but linear) and trained on books (hence book worm) with much more emphasis on context analysis and question analysis, with plot analysis of passage.
+Long Short Term Bert model or Short Long Term Bert or Life long learning (still have to decide) with Sparse Categorical Cross-Entropy loss function with linked list type of data feeding model (similarr to linkbert but linear) and trained on books (hence book worm) with much more emphasis on context, intentions and context-specific meaning analysis and question analysis, with plot analysis of passage.
 
 deep convolutional neural network transformer
 
