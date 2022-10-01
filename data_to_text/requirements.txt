@@ -1,0 +1,9 @@
+beautifulsoup4==4.11.1
+bs4==0.0.1
+cffi==1.15.1
+charset-normalizer==2.1.1
+cryptography==38.0.1
+pdfminer.six==20220524
+pycparser==2.21
+soupsieve==2.3.2.post1
+xml-cleaner==2.0.4

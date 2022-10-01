@@ -12,10 +12,11 @@ class PdfToTextClass:
         self.dirToPdf = dirToPdf
 
     def convertPdfToText(self):
-        output_string = StringIO()
+        laparamSetting = LAParams()
+        outputString = StringIO()
         with open(self.dirToPdf, 'rb') as fin:
-            extract_text_to_fp(fin, output_string)
-        return output_string.getvalue().strip()
+            extract_text_to_fp(fin, outputString, laparams=laparamSetting, codec='utf-8')
+        return outputString.getvalue().strip()
 
 pdf = PdfToTextClass()
 pdf.setDirToPdf("/home/jeff/Downloads/PlotBERTBooks/Atomic Habits An Easy Proven Way to Build Good Habits Break Bad Ones (James Clear) (z-lib.org).pdf")
