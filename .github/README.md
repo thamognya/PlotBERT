@@ -8,6 +8,8 @@ Long Short Term Bert model or Short Long Term Bert or Life long learning (still 
 
 deep convolutional neural network transformer
 
+quantum computing qiskit
+
 # Code
 
 ## Directory Structure
