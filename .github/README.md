@@ -1,6 +1,6 @@
-# PlotBERT
+# QuantumPlotBERT
 
-PlotBERT is an long text classification bookworm Language Model pretrained with books and long essays where in the 5 stage plot.
+QuantumPlotBERT is an long text classification bookworm Language Model pretrained with books and long essays where in the 5 stage plot on an quantum computer via qiskit library.
 
 # Research
 
