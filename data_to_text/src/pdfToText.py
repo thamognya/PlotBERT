@@ -18,6 +18,6 @@ class PdfToTextClass:
             extract_text_to_fp(fin, outputString, laparams=laparamSetting, codec='utf-8')
         return outputString.getvalue().strip()
 
-pdf = PdfToTextClass()
-pdf.setDirToPdf("/home/jeff/Downloads/PlotBERTBooks/Atomic Habits An Easy Proven Way to Build Good Habits Break Bad Ones (James Clear) (z-lib.org).pdf")
-print(pdf.convertPdfToText())
+#pdf = PdfToTextClass()
+#pdf.setDirToPdf("/home/jeff/Downloads/PlotBERTBooks/Atomic Habits An Easy Proven Way to Build Good Habits Break Bad Ones (James Clear) (z-lib.org).pdf")
+#print(pdf.convertPdfToText())

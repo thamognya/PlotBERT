@@ -26,6 +26,6 @@ class EpubToTextClass:
         return self.convertHtmlToText()
 
 
-e = EpubToTextClass()
-e.setDirToEpub("/home/jeff/Downloads/PlotBERTBooks/How to Win Friends and Influence People in the Digital Age (Dale Carnegie and Associates) (z-lib.org).epub")
-print(e.getEpub())
+#e = EpubToTextClass()
+#e.setDirToEpub("/home/jeff/Downloads/PlotBERTBooks/How to Win Friends and Influence People in the Digital Age (Dale Carnegie and Associates) (z-lib.org).epub")
+#print(e.getEpub())
