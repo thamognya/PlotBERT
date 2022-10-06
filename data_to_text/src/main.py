@@ -3,6 +3,8 @@ import pdfToText
 from os import listdir
 from os.path import isfile, join
 import pandas as pd
+import string
+import re
 # lets also normalize it to prevent errors with csv
 import sys
 sys.path.append('../../normalizer/src/')
@@ -67,6 +69,10 @@ class ConvertAll:
             pdf.setDirToPdf(i)
             name.append(i)
             pdfData = str(pdf.convertPdfToText())
+            pdfData = pdfData.translate(str.maketrans('', '', string.punctuation))
+            pdfData = re.sub(r'[^\w\s]', '', pdfData)
+            pdfData = pdfData.replace('', '')
+            pdfData = pdfData.lower()
             norm.setInputText(pdfData)
             pdfData = norm.getNormalizedText()
             pdfText.append("\"" + pdfData + "\"")
@@ -75,6 +81,10 @@ class ConvertAll:
             epub.setDirToEpub(i)
             name.append(i)
             epubData = str(epub.getEpub())
+            epubData = epubData.translate(str.maketrans('', '', string.punctuation))
+            epubData = re.sub(r'[^\w\s]', '', epubData)
+            epubData = epubData.replace('', '')
+            epubData = epubData.lower()
             norm.setInputText(epubData)
             epubData = norm.getNormalizedText()
             epubText.append("\"" + epubData + "\"")
