@@ -70,14 +70,13 @@ class ConvertAll:
             epubText.append(epubData)
             text.append(epubData)
         data = {
-                'name': name,
-                'text': text
-                }
+            'name': name,
+            'text': text
+        }
         df = pd.DataFrame(data)
-        df.to_csv(self.csvLoc, mode='a', index=False, header=False)
+        df.to_csv(self.csvLoc, mode='a', index=False, header=True)
         self.pdfText = pdfText
         self.epubText = epubText
         self.text = text
         self.name = name
-
 
