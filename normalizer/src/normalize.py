@@ -18,6 +18,7 @@ for i in constants.contractionsDict:
     contractions.add(i, constants.contractionsDict[i])
 
 class NormalizeTextClass:
+
     def __init__(self, inputText = ""):
         self.inputText = inputText
 
