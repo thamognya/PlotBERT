@@ -69,26 +69,26 @@ class ConvertAll:
             pdf.setDirToPdf(i)
             name.append(i)
             pdfData = str(pdf.convertPdfToText())
-            pdfData = pdfData.translate(str.maketrans('', '', string.punctuation))
-            pdfData = re.sub(r'[^\w\s]', '', pdfData)
-            pdfData = pdfData.replace('', '')
-            pdfData = pdfData.lower()
-            norm.setInputText(pdfData)
-            pdfData = norm.getNormalizedText()
-            pdfText.append("\"" + pdfData + "\"")
-            text.append("\"" + pdfData + "\"")
+            #pdfData = pdfData.translate(str.maketrans('', '', string.punctuation))
+            #pdfData = re.sub(r'[^\w\s]', '', pdfData)
+            #pdfData = pdfData.replace('', '')
+            #pdfData = pdfData.lower()
+            #norm.setinputtext(pdfdata)
+            #pdfdata = norm.getnormalizedtext()
+            pdfText.append(pdfData)
+            text.append(pdfData)
         for i in self.epubInFolder:
             epub.setDirToEpub(i)
             name.append(i)
             epubData = str(epub.getEpub())
-            epubData = epubData.translate(str.maketrans('', '', string.punctuation))
-            epubData = re.sub(r'[^\w\s]', '', epubData)
-            epubData = epubData.replace('', '')
-            epubData = epubData.lower()
-            norm.setInputText(epubData)
-            epubData = norm.getNormalizedText()
-            epubText.append("\"" + epubData + "\"")
-            text.append("\"" + epubData + "\"")
+            #epubData = epubData.translate(str.maketrans('', '', string.punctuation))
+            #epubData = re.sub(r'[^\w\s]', '', epubData)
+            #epubData = epubData.replace('', '')
+            #epubData = epubData.lower()
+            #norm.setInputText(epubData)
+            #epubData = norm.getNormalizedText()
+            epubText.append(epubData)
+            text.append(epubData)
         data = {
             'name': name,
             'text': text

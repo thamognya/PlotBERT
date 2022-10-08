@@ -7,4 +7,4 @@ def main(csvLoc, normalCsvLoc):
     normalizer.setNormalizedDataCsvLoc(normalCsvLoc)
     normalizer.normalizeDataCsv()
 
-main("../../data/text.csv", "../../data/normalizedText.csv")
+main("../../data/brokenText.csv", "../../data/normalizedText.csv")
